@@ -1,0 +1,75 @@
+@use "sass:math";
+@use "../basic/setting" as *;
+@use "../basic/variables" as *;
+
+.c-btn {
+    &--primary {
+        position: relative;
+        display: grid;
+        place-items: center;
+        border: 2px solid transparent;
+        transition: background-color 0.4s ease, border-color 0.4s ease;
+        background-color: $c-light-black;
+        color: $c-white;
+        border-radius: 999px;
+        margin: 0 auto;
+
+        @include mq(n, tb) {
+            width: clampVw(260, 325, 325, 1920);
+            padding: rem(25) rem(46);
+            // border-radius: rem(48);
+        }
+
+        @include mq(tb) {
+            width: clampVw(260, 300, 300, 820);
+            padding: clampVw(15, 20, 20, 375) clampVw(40, 40, 74, 375);
+            // border-radius: clampVw(36, 36, 60, 375);
+        }
+
+        &:hover {
+            background-color: $c-white;
+            color: $c-light-black;
+            border-color: $c-light-black;
+
+            &::after {
+                background-color: $c-light-black;
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            display: inline-block;
+            aspect-ratio: 12 / 14;
+            background-color: $c-white;
+            transition: background-color 0.4s ease;
+            mask: url("./images/common/btn_arrow.svg") center / contain no-repeat;
+
+            @include mq(n, tb) {
+                right: clampVw(0, 32, 32, 1536);
+                width: clampVw(12, 15, 15, 1279);
+            }
+
+            @include mq(tb) {
+                width: clampVw(16, 18, 18, 820);
+                right: clampVw(0, 18, 50, 375);
+            }
+        }
+
+        .text {
+            position: relative;
+            font-weight: 500;
+            transition: color 0.4s ease;
+
+            @include mq(n, tb) {
+                font-size: clampVw(18, 20, 20, 1279);
+            }
+
+            @include mq(tb) {
+                font-size: clampVw(16, 16, 16, 820);
+            }
+        }
+    }
+}

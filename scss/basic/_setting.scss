@@ -1,0 +1,134 @@
+@use "sass:math";
+
+$breakpoints: (
+    "xs": 320px,
+    "sm": 410px,
+    "sp": 576px,
+    "tb": 820px,
+    "md": 1024px,
+    "ml": 1280px,
+    "lg": 1440px,
+    "xl": 1536px,
+    "xxl": 1920px,
+) !default;
+
+// ------------------------
+// mq() ミックスイン
+// maxのみ、minのみ、min+max両方に対応
+// ------------------------
+// ------------------------
+// mq() ミックスイン
+// maxのみ、minのみ、min+max両方に対応
+// ------------------------
+@mixin mq($max-name: null, $min-name: null) {
+    $conditions: ();
+
+    @if $max-name == n {
+        $max-name: null;
+    }
+    @if $min-name == n {
+        $min-name: null;
+    }
+
+    @if $max-name != null and map-has-key($breakpoints, $max-name) {
+        $max: map-get($breakpoints, $max-name);
+        $conditions: append($conditions, "(max-width: #{$max})");
+    } @else if $max-name != null {
+        @error "指定された max ブレークポイント '#{$max-name}' は存在しません。使用可能: #{map-keys($breakpoints)}";
+    }
+
+    @if $min-name != null and map-has-key($breakpoints, $min-name) {
+        $min: map-get($breakpoints, $min-name) + 1px;
+        $conditions: append($conditions, "(min-width: #{$min})");
+    } @else if $min-name != null {
+        @error "指定された min ブレークポイント '#{$min-name}' は存在しません。使用可能: #{map-keys($breakpoints)}";
+    }
+
+    @if length($conditions) > 0 {
+        // prettier-ignore
+        $media-list: ("screen",); // screen のカンマ対策
+
+        @each $c in $conditions {
+            $media-list: append($media-list, quote($c));
+        }
+
+        // join() の代わりに手動で文字列結合
+        $media-query: "";
+
+        @each $item in $media-list {
+            $media-query: if($media-query == "", $item, "#{$media-query} and #{$item}");
+        }
+
+        @media #{$media-query} {
+            @content;
+        }
+    } @else {
+        @warn "mq() に max か min のどちらかは必須です。";
+    }
+}
+
+//clamp設定
+@function clampVw($min, $size, $max, $vp: 1920) {
+    $min: $min * 0.1rem;
+    $max: $max * 0.1rem;
+    $num: math.div(100, $vp) * 1vw;
+    $size_vw: $num * $size;
+    @return clamp($min, $size_vw, $max);
+}
+
+@mixin clampVwDec($property, $clampNum, $clampView) {
+    #{$property}: clampVw(($clampNum * 0.7), $clampNum, $clampNum, $clampView);
+}
+
+@mixin clampWrap($clampMinNum_sp, $clampMaxNum_sp, $clampMinNum, $clampMaxNum) {
+    @include mq(n, tb) {
+        padding-right: clampVw(($clampMinNum * 0.7), $clampMinNum, $clampMaxNum, 375);
+        padding-left: clampVw(($clampMinNum * 0.7), $clampMinNum, $clampMaxNum, 375);
+    }
+
+    @include mq(tb) {
+        padding-right: clampVw(($clampMinNum_sp * 0.7), $clampMinNum_sp, $clampMaxNum_sp, 375);
+        padding-left: clampVw(($clampMinNum_sp * 0.7), $clampMinNum_sp, $clampMaxNum_sp, 375);
+    }
+}
+
+// 通常のフォント
+@mixin fz($size: 24, $base: 16) {
+    font-size: $size + px;
+    font-size: math.div($size, $base * 0.625) + rem;
+}
+
+@function vw($vw, $viewport) {
+    $rate: math.div(100, $viewport);
+    @return $rate * $vw * 1vw;
+}
+
+@function pct($pct, $ws: 1920) {
+    $ratio: math.div(100, $ws);
+    @return $ratio * $pct * 1%;
+}
+
+@function rem($rem) {
+    $baseFz: 16;
+    @return math.div($rem, ($baseFz * 0.625)) + rem;
+}
+
+@mixin c-marginTop {
+    @include mq(ml, sp) {
+        margin-top: clampVw(140, 163, 163, 820);
+    }
+
+    @include mq(sp) {
+        margin-top: rem(92);
+    }
+}
+
+// hover and active
+
+@mixin hover {
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            @content;
+        }
+    }
+}

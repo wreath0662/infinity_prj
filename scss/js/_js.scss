@@ -1,0 +1,128 @@
+@use "animation";
+
+// intersectionObserver
+
+.fade {
+    &-appear {
+        opacity: 0;
+
+        &.fade-action {
+            animation-name: appear;
+            animation-duration: 0.8s;
+            animation-timing-function: ease;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    &-in {
+        opacity: 0;
+
+        &.fade-action {
+            animation-name: fade-in;
+            animation-duration: 0.8s;
+            animation-timing-function: ease;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    &-up {
+        opacity: 0;
+
+        &.fade-action {
+            animation-name: fade-up;
+            animation-duration: 0.8s;
+            animation-timing-function: ease;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    &-right {
+        opacity: 0;
+
+        &.fade-action {
+            animation-name: fade-right;
+            animation-duration: 0.8s;
+            animation-timing-function: ease;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    &-left {
+        opacity: 0;
+
+        &.fade-action {
+            animation-name: fade-left;
+            animation-duration: 0.8s;
+            animation-timing-function: ease;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    &-bg {
+        .title {
+            position: relative;
+            color: transparent;
+            transition: color 0.1ms 0.35s;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translate(101%, -50%);
+                width: 100%;
+                height: 100%;
+                background-color: var(--c-primary);
+            }
+        }
+
+        &.white {
+            .title {
+                &::before {
+                    background-color: var(--c-white);
+                }
+            }
+        }
+
+        &.fade-action {
+            .title {
+                color: var(--c-primary);
+
+                &::before {
+                    animation-name: fade-bg;
+                    animation-duration: 1.25s;
+                    animation-fill-mode: forwards;
+                }
+            }
+
+            &.white {
+                .title {
+                    color: var(--c-white);
+                }
+            }
+        }
+    }
+}
+
+// translate jQuery from vanilla
+
+// .j {
+//     &-out {
+//         animation-name: disappear;
+//         animation-duration: .8s;
+//         animation-fill-mode: both;
+//     }
+// }
+
+.fade {
+    &-cheese {
+        opacity: 0;
+
+        &.fade-action {
+            animation-name: appear;
+            animation-duration: 0.8s;
+            animation-timing-function: ease;
+            animation-fill-mode: forwards;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@use "sass:math";
+@use "../basic/setting" as *;
+@use "../basic/variables" as *;
+
+.c-heading {
+    &_section {
+        text-align: center;
+        .jpTitle {
+            display: block;
+            font-weight: 700;
+            font-size: clampVw(13, 16, 16, 1920);
+            color: $c-primary;
+        }
+
+        .title {
+            font-family: $f-primary-en;
+            margin-top: 2px;
+            display: inline-block;
+            font-weight: 700;
+            font-size: clampVw(28, 64, 64, 1920);
+            background: linear-gradient(90deg, #000000 20%, #ee87b4 44%, #000000 71%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}

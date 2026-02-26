@@ -1,0 +1,69 @@
+@use "setting" as *;
+
+.pc-only {
+    @include mq(n, tb) {
+        display: block;
+    }
+
+    @include mq(tb) {
+        display: none;
+    }
+}
+
+.pc-escape {
+    @include mq(n, tb) {
+        display: none;
+    }
+
+    @include mq(tb) {
+        display: block;
+    }
+}
+
+.tab-only {
+    @include mq(n, tb) {
+        display: none;
+    }
+
+    @include mq(tb, sp) {
+        display: block;
+    }
+
+    @include mq(sp) {
+        display: none;
+    }
+}
+
+.tab-escape {
+    @include mq(n, tb) {
+        display: block;
+    }
+
+    @include mq(tb, sp) {
+        display: none;
+    }
+
+    @include mq(sp) {
+        display: block;
+    }
+}
+
+.sp-only {
+    @include mq(n, sp) {
+        display: none;
+    }
+
+    @include mq(sp) {
+        display: block;
+    }
+}
+
+.sp-escape {
+    @include mq(n, sp) {
+        display: block;
+    }
+
+    @include mq(sp) {
+        display: none;
+    }
+}

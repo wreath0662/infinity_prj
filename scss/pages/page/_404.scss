@@ -1,0 +1,40 @@
+@use "sass:math";
+@use "../../basic/setting" as *;
+@use "../../basic/variables" as *;
+
+.p-notFound {
+    .error {
+        @include mq(n, tb) {
+            padding: rem(150) clampVw(32, 48, 48, 1279) clampVw(104, 400, 400, 1279);
+        }
+
+        @include mq(tb) {
+            padding: clampVw(230, 300, 400, 820) clampVw(20, 20, 32, 375) clampVw(300, 105, 105, 820);
+        }
+        &_content {
+            max-width: rem(1200);
+            margin-inline: auto;
+
+            &_text {
+                font-size: clampVw(22, 30, 30, 1920);
+                font-weight: 700;
+                letter-spacing: 0.05em;
+                text-align: center;
+
+                @include mq(n, sp) {
+                    line-height: 1.8;
+                }
+
+                @include mq(sp) {
+                    font-size: clampVw(14, 14, 18, 375);
+                    line-height: 1.5;
+                }
+            }
+
+            .c-btn--primary {
+                margin-top: clampVw(36, 36, 62, 375);
+                margin-inline: auto;
+            }
+        }
+    }
+}

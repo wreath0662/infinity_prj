@@ -1,0 +1,128 @@
+@use "sass:math";
+@use "../../basic/setting" as *;
+@use "../../basic/variables" as *;
+
+.p-privacy {
+    line-height: 2;
+    padding: 80px 0 120px;
+    background-color: $c-back-gray;
+    @include mq(sp) {
+        padding: 40px 0 40px;
+        line-height: 1.6;
+    }
+
+    &_inner {
+        background-color: #fff;
+        padding: 60px clampVw(60, 120, 120, 1920);
+        max-width: 1600px;
+        width: 90%;
+        margin: 0 auto;
+        @include mq(sp) {
+            padding: 30px;
+        }
+    }
+
+    &_title {
+        text-align: left;
+
+        @include mq(tb) {
+            text-align: center;
+        }
+    }
+
+    &_head {
+        margin-top: 30px;
+        font-size: clampVw(16, 18, 18, 1920);
+
+        @include mq(tb) {
+            font-size: clampVw(14, 16, 16, 820);
+        }
+    }
+
+    &_bgTitle {
+        margin-top: 50px;
+        margin-bottom: 24px;
+        padding-bottom: 12px;
+        font-size: clampVw(20, 22, 22, 1920);
+        border-bottom: 1px solid #e0e0e0;
+        background-size: 8px 1px;
+        background-repeat: repeat-x;
+        background-position: bottom left;
+        @include mq(tb) {
+            font-size: clampVw(16, 20, 20, 820);
+        }
+
+        @include mq(sp) {
+            margin-top: 30px;
+        }
+    }
+
+    &_contents {
+        margin-top: 40px;
+        @include mq(sp) {
+            margin-top: 30px;
+        }
+
+        &_head {
+            font-size: clampVw(16, 18, 18, 1920);
+            margin-top: 10px;
+            font-weight: 700;
+
+            @include mq(tb) {
+                font-size: clampVw(16, 20, 20, 820);
+            }
+        }
+
+        &_text {
+            font-size: clampVw(16, 18, 18, 1920);
+            font-weight: 500;
+            @include mq(tb) {
+                font-size: clampVw(14, 16, 16, 820);
+            }
+        }
+
+        &_list {
+            margin-top: 20px;
+            list-style: none;
+            padding-left: 0;
+
+            li {
+                font-size: clampVw(16, 18, 18, 1920);
+                position: relative;
+                padding-left: 1em;
+
+                @include mq(tb) {
+                    font-size: clampVw(14, 16, 16, 820);
+                }
+
+                &::before {
+                    content: "・";
+                    position: absolute;
+                    left: 0;
+                }
+
+                span {
+                    display: block;
+                }
+            }
+        }
+        .sub_title {
+            margin-top: 20px;
+            font-weight: 700;
+        }
+
+        &_contact {
+            margin-top: 20px;
+            padding: 25px;
+            border: 1px solid #e0e0e0;
+            width: 400px;
+
+            @include mq(sp) {
+                padding: 20px;
+                margin-right: auto;
+                margin-left: auto;
+                width: 100%;
+            }
+        }
+    }
+}

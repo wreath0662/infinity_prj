@@ -1,0 +1,59 @@
+@use "../lib/reset";
+@use "setting" as *;
+@use "variables" as *;
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+html {
+    font-size: 62.5%;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 90px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    color: $c-primary;
+    background-color: $c-white;
+    font-family: $f-primary;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    -webkit-text-size-adjust: 100%;
+
+    @include mq(n, sp) {
+        font-size: rem(16);
+    }
+    @include mq(tb) {
+        padding-top: 0;
+    }
+    @include mq(sp) {
+        font-size: rem(14);
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+    shape-margin: 0.75rem;
+}
+
+a {
+    color: $c-primary;
+    text-decoration: none;
+}
+
+.en {
+    font-family: $f-primary-en;
+}

@@ -1,0 +1,145 @@
+@use "sass:math";
+@use "../basic/setting" as *;
+@use "../basic/variables" as *;
+
+.l-footer {
+    position: relative;
+    z-index: 1;
+    padding-top: 150px;
+    padding-bottom: 20px;
+    background-color: $c-back-gray;
+
+    @include mq(sp) {
+        padding-top: 80px;
+    }
+
+    @include mq(sm) {
+        padding-top: 140px;
+    }
+
+    &_inner {
+        max-width: 1300px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    &_top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 45px;
+
+        @include mq(tb) {
+            flex-direction: column;
+        }
+    }
+
+    &_logo {
+        width: 300px;
+    }
+
+    &_nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &_list {
+        display: flex;
+        gap: clampVw(20, 30, 30, 1920);
+        justify-content: center;
+        margin-bottom: 10px;
+
+        @include mq(sp) {
+            flex-wrap: wrap;
+        }
+
+        li a {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 4px;
+            font-size: clampVw(16, 18, 18, 1920);
+            font-weight: 700;
+            white-space: nowrap;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+                background-color: currentColor;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 0.3s ease;
+            }
+
+            &:hover::after {
+                transform: scaleX(1);
+            }
+
+            @include mq(sp) {
+                font-size: 14px;
+            }
+        }
+        li:last-child {
+            flex-shrink: 0;
+        }
+        img {
+            display: block;
+            width: 24px;
+            height: auto;
+        }
+    }
+
+    .is-instagram a {
+        padding-bottom: 0;
+
+        &::after {
+            display: none;
+        }
+        &:hover img {
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+    }
+
+    &_privacy {
+        position: relative;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 500;
+        margin-top: 15px;
+        padding-bottom: 3px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 0.5px;
+            background-color: currentColor;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+        }
+        @include mq(sp) {
+            font-size: 12px;
+        }
+    }
+
+    &_bottom {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    &_copy {
+        font-size: 12px;
+    }
+}

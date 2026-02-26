@@ -1,0 +1,61 @@
+@use "sass:math";
+@use "../../basic/setting" as *;
+@use "../../basic/variables" as *;
+
+.p-sponsor {
+    background-color: #efefef;
+
+    &_inner {
+        padding: clampVw(100, 160, 160, 1920) 0;
+        width: 90%;
+        max-width: 1300px;
+        margin: 0 auto;
+
+        @include mq(sp) {
+            padding: 40px 0;
+        }
+
+        &_group {
+            margin-top: clampVw(60, 100, 100, 1920);
+            @include mq(sp) {
+                margin-top: 30px;
+            }
+        }
+
+        &_group + &_group {
+            margin-top: clampVw(50, 140, 140, 1920);
+        }
+
+        &_logo {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            @include mq(sp) {
+                flex-wrap: nowrap;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            img {
+                width: clampVw(200, 316, 316, 1920);
+
+                @include mq(sp) {
+                    width: clampVw(160, 200, 200, 1920);
+                }
+            }
+        }
+    }
+
+    &_title {
+        text-align: left;
+    }
+
+    h3 {
+        border-bottom: 1px solid #7b7b7b;
+        font-size: clampVw(20, 40, 40, 1920);
+        font-weight: 700;
+        font-family: $f-primary-en;
+    }
+}

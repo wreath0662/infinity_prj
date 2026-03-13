@@ -201,14 +201,21 @@
                 align-items: center;
                 gap: 20px;
                 width: clampVw(250, 280, 280, 1920);
+
+                @include mq(sp) {
+                    gap: 10px;
+                }
             }
 
             &_date {
                 font-family: $f-primary-en;
                 font-size: clampVw(16, 17, 17, 1920);
                 font-weight: 500;
+                min-width: 90px;
+
                 @include mq(sp) {
                     font-size: 15px;
+                    min-width: 85px;
                 }
             }
 

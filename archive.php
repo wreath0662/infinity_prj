@@ -27,6 +27,7 @@ get_header();
                         'orderby'    => 'name',
                         'order'      => 'ASC',
                         'hide_empty' => false,
+                        'exclude'    => get_cat_ID('未分類'),
                     ]);
 
                     foreach ($categories as $category) :

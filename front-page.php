@@ -48,6 +48,7 @@ Template Name: フロントページ
                         'orderby'    => 'name',
                         'order'      => 'ASC',
                         'hide_empty' => false,
+                        'exclude'    => get_cat_ID('未分類'),
                     ]);
 
                     foreach ($categories as $category) :
@@ -328,7 +329,7 @@ Template Name: フロントページ
                         参加条件：医院開業15年以下・年商5億円以下の方
                     </p>
 
-                    <a href="#" class="c-btn--primary plans_item_btn">
+                    <a href="<?= esc_url(home_url('dentist-course/2026-dt-course/')); ?>" class="c-btn--primary plans_item_btn">
                         <span class="text">詳しくみる</span>
                     </a>
                 </li>
@@ -362,7 +363,7 @@ Template Name: フロントページ
                         参加条件：臨床の現場で活躍する歯科衛生士の方<span>（※フリーランスとして起業されている方・講師業を行っている方は対象外）</span>
                     </p>
 
-                    <a href="#" class="c-btn--primary plans_item_btn">
+                    <a href=<?= esc_url(home_url('codental-course/2026-dh-course/')); ?> class="c-btn--primary plans_item_btn">
                         <span class="text">詳しくみる</span>
                     </a>
                 </li>

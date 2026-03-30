@@ -223,8 +223,10 @@ Template Name: フロントページ
                         <p class="teachers_item_role">Sherpa.株式会社 代表取締役／歯科衛生士
                         <p class="teachers_item_name">大久保 加奈</p>
                         <p class="teachers_item_text">
-                            歯科医療現場に経営視点を接続する現場介入型医院成長設計コンサルタント。<br>
-                            自費専門歯科勤務16年の臨床経験と医院コンサルティング実績をもとに、<br><br>
+                            歯科医療現場に経営視点を接続する<br>
+                            現場介入型医院成長設計コンサルタント。<br>
+                            自費専門歯科勤務16年の臨床経験と<br>
+                            医院コンサルティング実績をもとに、<br><br>
 
                             ・自費診療組織構築<br>
                             ・人材教育<br>
@@ -232,7 +234,7 @@ Template Name: フロントページ
                             ・カウンセリング導線設計<br>
                             ・幹部育成<br><br>
 
-                            など、歯科医院の持続的成長を実現する組織設計を専門とする。<br>
+                            など、歯科医院の持続的成長を実現する組織設計を専門とする。<br><br>
 
                             スタッフ1on1面談500名以上<br>
                             自費売上向上実績100％<br><br>
@@ -281,7 +283,7 @@ Template Name: フロントページ
 
                     <div class="teachers_item_body">
                         <p class="teachers_item_role">BRISTO DENTAL CLINIC 副院長
-                        <p class="teachers_item_name">具志 歩>
+                        <p class="teachers_item_name">具志 歩
                         <p class="teachers_item_text">
                             【資格】<br>
                             日本顕微鏡歯科学会認定歯科衛生士<br>

@@ -377,22 +377,19 @@ Template Name: フロントページ
     <section class="schedule fade-in">
         <div class="wrapper schedule_inner">
             <h2>2026年間スケジュール</h2>
-
             <img
                 class="tab-escape sp-escape"
-                src="<?= get_image_path('hm', 'schedule.png'); ?>"
+                src="<?= get_image_path('hm', 'schedule.png?v=20260330'); ?>"
                 alt="年間スケジュール">
 
             <div class="tab-only schedule_inner_sp">
                 <img
-                    src="<?= get_image_path('hm', 'schedule_sp.png'); ?>"
+                    src="<?= get_image_path('hm', 'schedule_sp.png?v=20260330'); ?>"
                     alt="年間スケジュール 1">
                 <img
-                    src="<?= get_image_path('hm', 'schedule_sp02.png'); ?>"
+                    src="<?= get_image_path('hm', 'schedule_sp02.png?v=20260330'); ?>"
                     alt="年間スケジュール 2">
             </div>
-
-
         </div>
     </section>
 

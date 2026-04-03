@@ -47,6 +47,7 @@ if (!defined('ABSPATH')) exit;
                         <img src="<?= get_image_path('sp', 'sponsor17.jpg'); ?>" alt="企業ロゴ">
                         <img src="<?= get_image_path('sp', 'sponsor18.jpg'); ?>" alt="企業ロゴ">
                         <img src="<?= get_image_path('sp', 'sponsor21.jpg'); ?>" alt="企業ロゴ">
+                        <img src="<?= get_image_path('sp', 'sponsor22.jpg'); ?>" alt="企業ロゴ">
                     </div>
                 </div>
 

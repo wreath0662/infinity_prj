@@ -187,7 +187,7 @@ Template Name: フロントページ
                     </div>
 
                     <div class="teachers_item_body">
-                        <p class="teachers_item_role">医療法人社団プライムエレメント 理事長</p>
+                        <p class="teachers_item_role">医療法人健誠会 常任理事<br>インプラント統括医・マルオ歯科グループ統括院長</p>
                         <p class="teachers_item_name">丸尾 勝一郎</p>
                         <p class="teachers_item_text">
                             東京医科歯科大学 卒業<br>

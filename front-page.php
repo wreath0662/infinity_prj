@@ -383,7 +383,7 @@ Template Name: フロントページ
                     </dl>
 
                     <p class="plans_item_condition">
-                        参加対象：臨床の現場で活躍する歯科衛生士の方（医院勤務・フリーランス）<span>※講師業として活動されている方は対象外です。</span>
+                        参加対象：臨床の現場で活躍する歯科衛生士の方<span>※講師業として活動されている方は対象外です。</span>
                     </p>
 
                     <a href=<?= esc_url(home_url('news/2027-4th-seminar/')); ?> class="c-btn--primary plans_item_btn">

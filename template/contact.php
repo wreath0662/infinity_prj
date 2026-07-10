@@ -17,7 +17,7 @@ if (!defined('ABSPATH')) {
         <p class="cta_lead">
             ご質問やご相談など、まずはお気軽にお問い合わせください。
         </p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdg1NscloBA9ecoQT08ePuNNvTNNCQQZ7ReFc1fdsUfi4X4tw/viewform" target="_blank"
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSctw2SH7VHnIps4jjwcAPWTOacI4yIKH1L6tYdWY_OFykvG2Q/viewform?usp=send_form" target="_blank"
             rel="noopener noreferrer" class="cta_btn">
             <span class="text">お問い合わせフォーム</span>
         </a>

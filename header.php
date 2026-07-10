@@ -66,7 +66,7 @@ if (!defined('ABSPATH')) exit;
                     </a>
                 </li>
                 <li class="l-header_menu">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdg1NscloBA9ecoQT08ePuNNvTNNCQQZ7ReFc1fdsUfi4X4tw/viewform" target="_blank"
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSctw2SH7VHnIps4jjwcAPWTOacI4yIKH1L6tYdWY_OFykvG2Q/viewform?usp=send_form" target="_blank"
                         rel="noopener noreferrer">
                         <p>お問い合わせ</p>
                     </a>
@@ -117,7 +117,7 @@ if (!defined('ABSPATH')) exit;
                             </a>
                         </li>
                         <li class="hamburger_menu_contact">
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdg1NscloBA9ecoQT08ePuNNvTNNCQQZ7ReFc1fdsUfi4X4tw/viewform" target="_blank"
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSctw2SH7VHnIps4jjwcAPWTOacI4yIKH1L6tYdWY_OFykvG2Q/viewform?usp=send_form" target="_blank"
                                 rel="noopener noreferrer">
                                 <span>お問い合わせ</span>
                             </a>

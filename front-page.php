@@ -326,13 +326,15 @@ Template Name: フロントページ
                     </p>
 
                     <dl class="plans_item_price">
-                        <div>
+                        <!--2026.07.10－ 削除-->
+                        <!--div>
                             <dt>プレセミナー</dt>
                             <dd>
                                 <span class="num">3</span><span class="comma">,</span><span class="num">000</span>円
                             </dd>
 
-                        </div>
+                        </div-->
+                        <!--//2026.07.10－削除-->
                         <div>
                             <dt>本セミナー</dt>
                             <dd>
@@ -366,12 +368,14 @@ Template Name: フロントページ
                     </p>
 
                     <dl class="plans_item_price">
-                        <div>
+                        <!--2026.07.10－ 削除-->
+                        <!--div>
                             <dt>プレセミナー</dt>
                             <dd>
                                 <span class="num">1</span><span class="comma">,</span><span class="num">000</span>円
                             </dd>
-                        </div>
+                        <div-->
+                        <!--//2026.07.10－削除-->
                         <div>
                             <dt>本セミナー</dt>
                             <dd> <span class="num">60</span><span class="comma">,</span><span class="num">000</span>円</dd>
@@ -379,7 +383,7 @@ Template Name: フロントページ
                     </dl>
 
                     <p class="plans_item_condition">
-                        参加条件：臨床の現場で活躍する歯科衛生士の方<span>（※フリーランスとして起業されている方・講師業を行っている方は対象外）</span>
+                        参加対象：臨床の現場で活躍する歯科衛生士の方（医院勤務・フリーランス）<span>※講師業として活動されている方は対象外です。</span>
                     </p>
 
                     <a href=<?= esc_url(home_url('news/2027-4th-seminar/')); ?> class="c-btn--primary plans_item_btn">

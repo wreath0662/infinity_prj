@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) exit;
                     <li><a href="<?= esc_url(home_url('/#teachers')); ?>">講師紹介</a></li>
                     <li><a href="<?= esc_url(home_url('/#plan')); ?>">プラン</a></li>
                     <li><a href="<?= esc_url(home_url('/sponsor')); ?>">協賛企業</a></li>
-                    <li> <a href="hthttps://docs.google.com/forms/d/e/1FAIpQLSctw2SH7VHnIps4jjwcAPWTOacI4yIKH1L6tYdWY_OFykvG2Q/viewform?usp=send_form" target="_blank"
+                    <li> <a href="https://docs.google.com/forms/d/e/1FAIpQLSctw2SH7VHnIps4jjwcAPWTOacI4yIKH1L6tYdWY_OFykvG2Q/viewform?usp=send_form" target="_blank"
                             rel="noopener noreferrer">お問い合わせ</a></li>
                     <li class="is-instagram">
                         <a href="https://www.instagram.com/dentalstudygroupinfinity" target="_blank"

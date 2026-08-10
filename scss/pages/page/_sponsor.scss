@@ -30,20 +30,48 @@
             margin-top: 30px;
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 18px 10px;
+
+            @include mq(md){
+                gap: 20px 10px;
+            }
 
             @include mq(sp) {
                 flex-wrap: nowrap;
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
             }
 
             img {
                 width: clampVw(200, 316, 316, 1920);
 
                 @include mq(sp) {
-                    width: clampVw(160, 200, 200, 1920);
+                    width: 100%;
                 }
+            }
+        }
+
+        &_link{
+            transition: 0.3s ease;
+
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+
+        &_name{
+            padding-left: 8px;
+            font-weight: 700;
+            padding-bottom: 6px;
+            font-size: clampVw(14,16,16,1920);
+
+            @include mq(md){
+                font-size: clampVw(11,12,14,820);
+            }
+            @include mq(sp){
+                font-size: clampVw(11,12,12,600);
+                padding-bottom: 4px;
             }
         }
     }

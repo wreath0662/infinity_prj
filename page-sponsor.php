@@ -154,6 +154,18 @@ if (!defined('ABSPATH')) exit;
                                 <img src="<?= get_image_path('sp', 'sponsor23.jpg'); ?>" alt="企業ロゴ">
                             </a>
                         </li>
+                        <li class="p-sponsor_inner_item">
+                            <a class="p-sponsor_inner_link" href="https://www.straumann.com/jp/ja/home.html" target="_blank">
+                                <p class="p-sponsor_inner_name">インプラント</p>
+                                <img src="<?= get_image_path('sp', 'sponsor24.jpg'); ?>" alt="企業ロゴ">
+                            </a>
+                        </li>
+                        <li class="p-sponsor_inner_item">
+                            <a class="p-sponsor_inner_link" href="https://www.solventum.com/ja-jp/home/" target="_blank">
+                                <p class="p-sponsor_inner_name">接着・合着セメント材</p>
+                                <img src="<?= get_image_path('sp', 'sponsor25.jpg'); ?>" alt="企業ロゴ">
+                            </a>
+                        </li>
                     </ul>
                 </div>
 

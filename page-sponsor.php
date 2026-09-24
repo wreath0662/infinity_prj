@@ -166,6 +166,12 @@ if (!defined('ABSPATH')) exit;
                                 <img src="<?= get_image_path('sp', 'sponsor25.jpg'); ?>" alt="企業ロゴ">
                             </a>
                         </li>
+                        <li class="p-sponsor_inner_item">
+                            <a class="p-sponsor_inner_link" href="https://www.forest-one.co.jp/" target="_blank">
+                                <p class="p-sponsor_inner_name">歯科機材•歯科材料の輸入、販売</p>
+                                <img src="<?= get_image_path('sp', 'sponsor26.jpg'); ?>" alt="企業ロゴ">
+                            </a>
+                        </li>
                     </ul>
                 </div>
 

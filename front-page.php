@@ -26,6 +26,30 @@ Template Name: フロントページ
             </picture>
         </figure>
     </a>
+    <a class="banner-link" href="https://infinity-hp.net/%e3%82%bb%e3%83%9f%e3%83%8a%e3%83%bc%e6%83%85%e5%a0%b1/infinity-general-meeting-2026/" target="_blank" rel="noopener noreferrer">
+        <figure class="banner fade-in">
+            <picture>
+                <source
+                    media="(max-width: 576px)"
+                    srcset="<?= get_image_path('hm', 'banner-1_sp.jpg'); ?>">
+                <img
+                    src="<?= get_image_path('hm', 'banner-1.jpg'); ?>"
+                    alt="バナー">
+            </picture>
+        </figure>
+    </a>
+    <a class="banner-link" href="https://infinity-hp.net/%e3%82%bb%e3%83%9f%e3%83%8a%e3%83%bc%e6%83%85%e5%a0%b1/infinity-instagram-live-2026/" target="_blank" rel="noopener noreferrer">
+        <figure class="banner fade-in">
+            <picture>
+                <source
+                    media="(max-width: 576px)"
+                    srcset="<?= get_image_path('hm', 'banner-2_sp.jpg'); ?>">
+                <img
+                    src="<?= get_image_path('hm', 'banner-2.jpg'); ?>"
+                    alt="バナー">
+            </picture>
+        </figure>
+    </a>
     <!-- お知らせ -->
     <section class="news fade-in">
         <div class="news_inner">

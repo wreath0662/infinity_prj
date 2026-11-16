@@ -26,7 +26,8 @@ Template Name: フロントページ
             </picture>
         </figure>
     </a>
-    <a class="banner-link" href="https://infinity-hp.net/seminar/infinity-general-meeting-2026/" target="_blank" rel="noopener noreferrer">
+<!--2026.11.16－ 非表示-->
+    <!--a class="banner-link" href="https://infinity-hp.net/seminar/infinity-general-meeting-2026/" target="_blank" rel="noopener noreferrer">
         <figure class="banner fade-in">
             <picture>
                 <source
@@ -37,7 +38,8 @@ Template Name: フロントページ
                     alt="バナー">
             </picture>
         </figure>
-    </a>
+    </a-->
+<!--2026.11.16－ 非表示-->
 
 <!--2026.10.23－ 非表示-->
     <!--a class="banner-link" href="https://infinity-hp.net/seminar/infinity-instagram-live-2026/" target="_blank" rel="noopener noreferrer">
